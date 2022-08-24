@@ -27,8 +27,16 @@ public class ticTacToe {
 		        System.out.println("Computer Letter " + computerLetter);
 	
 	}	
+		 static void display(char[][] g) {
+			 System.out.println(" "+g[0][0]+" | "+g[0][1]+" | "+g[0][2]);
+				System.out.println("-----------");
+				System.out.println(" "+g[1][0]+" | "+g[1][1]+" | "+g[1][2]);
+				System.out.println("-----------");
+				System.out.println(" "+g[2][0]+" | "+g[2][1]+" | "+g[2][2]);	 
+		 }
 	public static void main(String[] args) {
 		createGrid(grid);
 		getLetter();
+		display(grid);
 	}
 }
