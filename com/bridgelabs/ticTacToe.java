@@ -1,14 +1,34 @@
 package com.bridgelabs;
+import java.util.Scanner;
 
 public class ticTacToe {
-
-	public static void main(String[] args) {
-		char[][] grid = new char[3][3];		
+	public enum CurrentPlayer{
+		PERSON, COMPUTER
+	}
+	static char[][]grid = new char[3][3];
+	static Scanner scanner = new Scanner(System.in);
+	static char personLetter;
+	static char computerLetter;
+	static int position;
+	
+	static void createGrid(char[][] grid) {		
 		for(int i=0;i<3;i++) {
-			for(int j=0;j<3;j++)
-				grid[i][j] = ' ';						
-				System.out.println(i+ ":");
-				System.out.println(J+ ":");
+			for(int j=0;j<3;j++) {
+				grid[i][j] = ' ';					
+
+			}
 		}
+	}
+		 static void getLetter() {
+		        System.out.println("Choose the Letter(X or O)");
+		        personLetter = scanner.next().toUpperCase().charAt(0);
+		        computerLetter = (personLetter == 'X') ? 'O' : 'X';
+		        System.out.println("Your Letter is " + personLetter);
+		        System.out.println("Computer Letter " + computerLetter);
+	
+	}	
+	public static void main(String[] args) {
+		createGrid(grid);
+		getLetter();
 	}
 }
