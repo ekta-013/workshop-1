@@ -34,9 +34,53 @@ public class ticTacToe {
 				System.out.println("-----------");
 				System.out.println(" "+g[2][0]+" | "+g[2][1]+" | "+g[2][2]);	 
 		 }
+		 static void makeMove(int position, char currentPersonLetter, char[][] g) {
+			switch(position) {
+			case 1:
+				if (g[0][0] == ' ')
+					g[0][0] = currentPersonLetter;
+				break;
+			case 2:
+				if (g[0][1] == ' ')
+					g[0][1] = currentPersonLetter;
+				break;
+			case 3:
+				if (g[0][2] == ' ')
+					g[0][2] = currentPersonLetter;
+				break;
+			case 4:
+				if (g[1][0] == ' ')
+					g[1][0] = currentPersonLetter;
+				break;
+			case 5:
+				if (g[1][1] == ' ')
+					g[1][1] = currentPersonLetter;
+				break;
+			case 6:
+				if (g[1][2] == ' ')
+					g[1][2] = currentPersonLetter;
+				break;
+			case 7:
+				if (g[2][0] == ' ')
+					g[2][0] = currentPersonLetter;
+				break;
+			case 8:
+				if (g[2][1] == ' ')
+					g[2][1] = currentPersonLetter;
+				break;
+			case 9:
+				if (g[2][2] == ' ')
+					g[2][2] = currentPersonLetter;
+				break;
+			default:
+				break;
+		}		
+	}
 	public static void main(String[] args) {
 		createGrid(grid);
 		getLetter();
+		display(grid);
+		makeMove(3, personLetter, grid);
 		display(grid);
 	}
 }
